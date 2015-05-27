@@ -1,0 +1,23 @@
+<head>
+  <title>EventHub1</title>
+</head>
+
+<body>
+<h1>Welcome to the Events!</h1>
+
+{{> inAppDesktopLayout}}
+</body>
+
+
+<template name="inAppDesktopLayout">
+  {{> Template.dynamic template=main}}
+</template>
+
+<template name="home">
+
+  <h2>You can see events list or single event.</h2>
+  <ul>
+    <li><a href="/events"> EventList </a></li>
+    <li><a href="/events/1"> SingleEvent </a></li>
+  </ul>
+</template>
