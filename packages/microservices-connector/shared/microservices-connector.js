@@ -7,8 +7,11 @@ console.log('Number of training videos before subscription : '+TrainingVideos.fi
 OurConnector = {
   subscribeToAdvisors: function (subscriptionName) {
     advisorsApp.subscribe(subscriptionName, function () {
-      console.log('Number of training videos AFTER subscription : '+TrainingVideos.find().count());
+      console.log('Number of training videos AFTER subscription to other app on port 6001: '+TrainingVideos.find().count());
+      console.log('Training videos AFTER subscription to other app on port 6001: ');
+      console.log(TrainingVideos.find().fetch());
     });
   }
 };
+
 
